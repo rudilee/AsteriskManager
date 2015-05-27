@@ -16,14 +16,16 @@ SOURCES += asteriskmanager.cpp \
     packet.cpp \
     action.cpp \
     loginaction.cpp \
-    logoffaction.cpp
+    logoffaction.cpp \
+    tcppackettransport.cpp
 
 HEADERS += asteriskmanager.h \
     packettransport.h \
     packet.h \
     action.h \
     loginaction.h \
-    logoffaction.h
+    logoffaction.h \
+    tcppackettransport.h
 unix {
     target.path = /usr/lib
     INSTALLS += target
