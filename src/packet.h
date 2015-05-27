@@ -15,7 +15,7 @@ public:
 
     explicit Packet(Type type = Action);
 
-    virtual void addField(QString key, QVariant field);
+    void addField(QString key, QVariant field);
     void addVariable(QString variable, QVariant field);
     void setFields(QMultiHash<QString, QVariant> fields);
 

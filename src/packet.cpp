@@ -7,6 +7,11 @@ Packet::Packet(Type type) : m_type(type)
 void Packet::addField(QString key, QVariant value)
 {
     fields.insert(key, convertToString(value));
+
+    if (key == "Response")
+        m_type = Response;
+    else if (key == "Event")
+        m_type = Event;
 }
 
 void Packet::addVariable(QString variable, QVariant value)
