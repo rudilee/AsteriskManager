@@ -10,6 +10,7 @@ class PacketTransport : public QObject
     Q_OBJECT
 
 public:
+    virtual void makeConnection(QString host, quint16 port) = 0;
     virtual void sendPacket(Packet packet) = 0;
 
 signals:
