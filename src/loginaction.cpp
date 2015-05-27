@@ -1,6 +1,6 @@
 #include "loginaction.h"
 
-LoginAction::LoginAction() : Action("Login")
+LoginAction::LoginAction(QString actionId) : Action("Login", actionId)
 {
 }
 

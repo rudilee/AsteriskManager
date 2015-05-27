@@ -1,5 +1,5 @@
 #include "logoffaction.h"
 
-LogoffAction::LogoffAction() : Action("Logoff")
+LogoffAction::LogoffAction(QString actionId) : Action("Logoff", actionId)
 {
 }

@@ -6,7 +6,7 @@
 class LoginAction : public Action
 {
 public:
-    LoginAction();
+    explicit LoginAction(QString actionId = QString());
 
     void setUsername(QString username);
     void setSecret(QString secret);

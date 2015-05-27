@@ -2,9 +2,11 @@
 
 #include "action.h"
 
-Action::Action(QString actionName, QObject *parent) : QObject(parent), Packet(Packet::Action),
-    actionId(QUuid::createUuid().toString())
+Action::Action(QString actionName, QString actionId, QObject *parent) : QObject(parent), Packet(Packet::Action)
 {
+    if (actionId.isEmpty())
+        actionId = QUuid::createUuid().toString();
+
     addField("Action", actionName);
     addField("ActionID", actionId);
 }

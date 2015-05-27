@@ -8,7 +8,7 @@ class Action : public QObject, public Packet
     Q_OBJECT
 
 public:
-    explicit Action(QString actionName, QObject *parent = 0);
+    explicit Action(QString actionName, QString actionId = QString(), QObject *parent = 0);
 
     QString getActionId();
 

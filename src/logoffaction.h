@@ -6,7 +6,7 @@
 class LogoffAction : public Action
 {
 public:
-    LogoffAction();
+    explicit LogoffAction(QString actionId = QString());
 };
 
 #endif // LOGOFFACTION_H
