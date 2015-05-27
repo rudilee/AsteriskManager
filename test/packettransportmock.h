@@ -9,6 +9,7 @@ class PacketTransportMock : public PacketTransport
 public:
     explicit PacketTransportMock();
 
+    void makeConnection(QString address, quint16 port);
     void sendPacket(Packet packet);
     Packet getSentPacket();
 
