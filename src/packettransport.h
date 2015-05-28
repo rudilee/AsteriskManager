@@ -14,6 +14,8 @@ public:
     virtual void sendPacket(Packet packet) = 0;
 
 signals:
+    void connected();
+    void disconnected();
     void packetReceived(Packet packet);
 };
 

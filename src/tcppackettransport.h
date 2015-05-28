@@ -7,6 +7,8 @@
 
 class TcpPacketTransport : public PacketTransport
 {
+    Q_OBJECT
+
 public:
     explicit TcpPacketTransport();
 
@@ -21,10 +23,6 @@ private:
 
 private slots:
     void readFromSocket();
-
-signals:
-    void connected();
-    void disconnected();
 };
 
 #endif // TCPPACKETTRANSPORT_H
