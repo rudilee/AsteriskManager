@@ -10,6 +10,8 @@ AsteriskManager::AsteriskManager(QObject *parent) : QObject(parent),
 void AsteriskManager::setPacketTransport(PacketTransport *packetTransport)
 {
     this->packetTransport = packetTransport;
+
+    connect(packetTransport, SIGNAL(packetReceived(Packet)), SLOT(dispatchPacket(Packet)));
 }
 
 void AsteriskManager::sendAction(Action *action)
