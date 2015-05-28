@@ -5,10 +5,10 @@
 Action::Action(QString actionName, QString actionId, QObject *parent) : QObject(parent), Packet(Packet::Action)
 {
     if (actionId.isEmpty())
-        actionId = QUuid::createUuid().toString();
+        this->actionId = QUuid::createUuid().toString();
 
     addField("Action", actionName);
-    addField("ActionID", actionId);
+    addField("ActionID", this->actionId);
 }
 
 QString Action::getActionId()
